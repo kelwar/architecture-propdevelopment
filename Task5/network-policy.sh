@@ -6,4 +6,4 @@ kubectl run admin-front-end-app --image=nginx --labels role=admin-front-end --ex
 kubectl apply -f non_admin_api_allow.yaml
 kubectl apply -f non_admin_frontend_allow.yaml
 kubectl apply -f admin_api_allow.yaml
-kubectl apply -f admin_fronted_allow.yaml
+kubectl apply -f admin_frontend_allow.yaml
