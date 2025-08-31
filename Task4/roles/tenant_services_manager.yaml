@@ -1,8 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  namespace: tenant_services
-  name: tenant_services_manager
+  namespace: tenant-services
+  name: tenant-services-manager
 rules:
 - apiGroups: [""]
   resources: ["pods"]

@@ -1,8 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  namespace: client_services
-  name: client_services_manager
+  namespace: client-services
+  name: client-services-manager
 rules:
 - apiGroups: [""]
   resources: ["pods"]
