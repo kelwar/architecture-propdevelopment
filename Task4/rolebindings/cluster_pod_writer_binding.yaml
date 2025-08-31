@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cluster-write-pods
+subjects:
+  - kind: ServiceAccount
+    name: devops
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+    kind: ClusterRole
+    name: cluster-pod-writer
+    apiGroup: rbac.authorization.k8s.io
