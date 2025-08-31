@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: manage-tenant-services
+  namespace: tenant-services
+subjects:
+  - kind: ServiceAccount
+    name: support
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: tenant-services-manager
+  apiGroup: rbac.authorization.k8s.io

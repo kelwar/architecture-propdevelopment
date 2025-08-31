@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: manage-client-services
+  namespace: client-services
+subjects:
+  - kind: ServiceAccount
+    name: manager
+    apiGroup: rbac.authorization.k8s.io
+  - kind: ServiceAccount
+    name: support
+    apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: client-services-manager
+  apiGroup: rbac.authorization.k8s.io
